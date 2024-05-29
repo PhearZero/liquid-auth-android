@@ -35,14 +35,26 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
+}
+
+publishing {
+    repositories {
+        maven {
+            // change to point to your repo, e.g. http://my.org/repo
+            url = uri("https://github.com/PhearZero/liquid-auth-android")
+        }
+    }
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "foundation.algorand"
+            artifactId = "auth"
+            version = "1.0.0"
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }
-
 dependencies {
     // AlgoSDK
     implementation("com.algorand:algosdk:2.4.0")
