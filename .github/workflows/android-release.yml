@@ -27,4 +27,4 @@ jobs:
       - name: Install
         run: npm install --save @semantic-release/changelog @semantic-release/git @semantic-release/github
       - name: Semantic Release
-        run: npx semantic-release --dry-run
+        run: npx semantic-release
