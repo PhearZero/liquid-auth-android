@@ -1,3 +1,10 @@
+# [1.1.0-beta.1](https://github.com/PhearZero/liquid-auth-android/compare/v1.0.0...v1.1.0-beta.1) (2024-05-29)
+
+
+### Features
+
+* add white space to readme ([0f92f9a](https://github.com/PhearZero/liquid-auth-android/commit/0f92f9a4658053881f224be64535ec47d15cc5d3))
+
 # 1.0.0 (2024-05-29)
 
 
