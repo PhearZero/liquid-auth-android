@@ -2,7 +2,7 @@ name: Liquid Auth - Android - Release
 
 on:
   push:
-    branches: [ 'main', 'develop' ]
+    branches: [ 'release/*', 'develop' ]
 jobs:
   build:
     permissions:
