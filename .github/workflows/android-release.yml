@@ -21,6 +21,9 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: Build with Gradle
         run: ./gradlew build
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
       - name: Install
         run: npm install --save @semantic-release/changelog @semantic-release/git @semantic-release/github
       - name: Semantic Release
