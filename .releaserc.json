@@ -9,7 +9,7 @@
         "assets": [
           "CHANGELOG.md"
         ],
-        "message": "chore(release): Liquid Auth \n\n${nextRelease.notes}"
+        "message": "chore(release): [skip ci] Liquid Auth \n\n${nextRelease.notes}"
       }
     ],
     [
@@ -28,7 +28,7 @@
   "branches": [
     "release/*",
     {
-      "name": "develop",
+      "name": "main",
       "prerelease": "beta"
     }
   ]
