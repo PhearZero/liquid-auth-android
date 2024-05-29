@@ -5,8 +5,6 @@ plugins {
     id("dagger.hilt.android.plugin")
     `maven-publish`
 }
-group = "foundation.algorand.auth"
-version = "1.0.0"
 
 android {
     namespace = "foundation.algorand.auth"
@@ -48,7 +46,6 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "foundation.algorand"
             artifactId = "auth"
-            version = "1.0.0"
             afterEvaluate {
                 from(components["release"])
             }
