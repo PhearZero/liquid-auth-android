@@ -1,9 +1,8 @@
-name: Android - Demo App Tagged Release
+name: Liquid Auth - Android - Release
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [ 'main', 'develop' ]
 jobs:
   build:
     permissions:
@@ -22,22 +21,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: Build with Gradle
         run: ./gradlew build
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Debug Release ${{ github.ref }}
-          prerelease: true
-      - name: Upload Debug APK
-        id: upload_release_asset
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: './demo/build/outputs/apk/debug/demo-debug.apk'
-          asset_name: fido2-debug.apk
-          asset_content_type: application/vnd.android.package-archive
+      - name: Install
+        run: npm install --save @semantic-release/changelog @semantic-release/git @semantic-release/github
+      - name: Semantic Release
+        run: npx semantic-release --dry-run
