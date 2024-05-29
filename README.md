@@ -5,6 +5,8 @@ This is a client library for the Liquid Auth service. It provides a simple way t
 
 # Overview
 
+
+
 This project has two main components:
 
 1. **foundation.algorand.auth**: A client library for the liquid-auth service
