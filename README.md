@@ -1,4 +1,5 @@
 # Liquid Auth Client
+[![Release](https://jitpack.io/v/User/Repo.svg)](https://jitpack.io/#phearzero/liquid-auth-android)
 
 This is a client library for the Liquid Auth service. It provides a simple way to authenticate users and create peer connections
 
